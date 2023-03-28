@@ -20,7 +20,13 @@ const Countries = () => {
 
 				{radios.map((continent, index) => (
 					<li key={index}>
-						<input id={continent} type="radio" name="Continent-radio" onChange={(e) => setSelectedRadio(e.target.id)} />
+						<input
+							id={continent}
+							type="radio"
+							name="Continent-radio"
+							checked={continent === selectedRadio}
+							onChange={(e) => setSelectedRadio(e.target.id)}
+						/>
 						<label htmlFor={continent}>{continent}</label>
 					</li>
 				))}
@@ -32,7 +38,7 @@ const Countries = () => {
 					.sort((a, b) => b.population - a.population)
 					.slice(0, rangeValue)
 					.map((country, index) => (
-						<Card key={index} country={country}/>
+						<Card key={index} country={country} />
 					))}
 			</ul>
 		</div>
