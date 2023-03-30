@@ -53,10 +53,16 @@
 	}
 
 	ul {
-    margin-top: 10px;
+		margin-top: 10px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		
+	}
+}
+
+@media screen and (max-width: 450px) {
+	input{
+		width: 100%;
+		margin-bottom: 10px;
 	}
 }
